@@ -13,11 +13,11 @@ The value of alert latency determines the timing of an alert of the system compa
 ###  Failure Analysis
 
 ### Failure Case 1: Motion Masking True Deterioration
-In cases where severe motion overlaps with genuine SpO₂ decline, artifact suppression may reduce sensitivity. This could delay detection of real hypoxia. A possible improvement would be multi-signal confirmation using heart rate and blood pressure trends.
+Artifact suppression can suppress sensitivity in a situation where severe motion is overlapping with true SpO2 fall. This may cause a postponement of actual hypoxia. Multi-signal confirmation based on heart rate and blood pressure trends would be a potential improvement.
 
 ### Failure Case 2: Slow Deterioration Below Trend Threshold
-Very gradual physiological decline may not exceed the trend thresholds within the defined window. Increasing multi-window analysis or adaptive thresholds could reduce this risk.
+Slow physiological deterioration can lie within the trend limits in the set time frame. This risk could be minimized by increasing multi-window analysis or by changing the thresholds.
 
 ### Failure Case 3: Sensor Dropout or Missing Data
-Extended sensor dropout can reduce confidence and suppress alerts. Future versions should explicitly detect missing data segments and escalate alerts based on uncertainty rather than suppression alone.
+Long sensor drop out may decrease confidence and inhibit alerts. Future iterations must explicitly identify missing data segments and raise more alarm on basis of uncertainty and not by suppression alone.
 
