@@ -1,10 +1,11 @@
 
-The system does not rely on fixed thresholds for vitals. Instead, it uses short-term trends and signal reliability to estimate patient risk.
+The system is not based on predetermined vitals. Rather, it employs short-term trends and signal reliability to approximate patient risk.
 
-Heart rate risk is calculated based on a rising trend over a 60-second window. A sustained increase indicates possible physiological stress rather than momentary noise.
+Heart rate risk has been computed using an increasing trend within a 60-sec period. Constant rise means that there is a likelihood of physiological stress and not transient noise.
 
-SpO₂ risk is calculated using the cleaned SpO₂ signal. A falling trend over the same window indicates potential respiratory deterioration.
+Cleaned SpO2 signal is used to compute SpO2 risk. A decreasing tendency during the same window shows the possibility of respiratory degradation.
 
-Motion-induced artifacts are explicitly detected earlier in the pipeline. If a high percentage of artifacts are present in the recent window, the risk score is penalized to reduce false alerts.
+The artifacts brought about by motion are explicitly identified at an earlier stage in the pipeline. The risk score is penalized to minimize false alerts in case the proportion of artifacts in the recent window is high.
 
-The final risk score is a weighted combination of heart rate trend and SpO₂ trend, adjusted by signal confidence. An anomaly alert is triggered only when the risk score exceeds a conservative threshold, ensuring alerts are persistent and clinically meaningful.
+The risk score is the final weighted score of heart rate trend and SpO2 trend which is adjusted with signal confidence. An anomaly alert gets raised when the risk score is beyond a conservative level and makes anomaly alerts resilient and clinically significant.
+
