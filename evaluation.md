@@ -1,16 +1,16 @@
-## – Alert Quality Metrics
+## Alert Quality Metrics
 
-The alerting system is evaluated using precision, recall, false alert rate, and alert latency.
+Precision, recall, false alert rate, and alert latency are used as the measures of evaluation of the alerting system.
 
-Precision measures how many triggered alerts correspond to true patient deterioration. In an ambulance setting, moderate precision is acceptable as long as alerts are not excessively noisy.
+Precision is the proportion of patient deterioration that is being reported by the alerts being activated. In ambulance environment, moderate accuracy is agreeable provided that alerts are not too loud.
 
-Recall measures how many true deterioration events are successfully detected. Low recall is dangerous in emergency transport and is considered the most critical failure mode.
+Recall defines the number of true deterioration events that are detected. The problem of low recall is perilous in emergency transportation and can be regarded as the most critical failure mode.
 
-False alert rate represents how often alerts are triggered due to noise or artifacts. This system reduces false alerts by explicitly handling motion-induced SpO₂ artifacts before anomaly detection.
+False alert rate: It is the frequency with which alerts are issued as a result of noise or artifact. This system minimizes false alerts through explicitly addressing motion induced SpO2 artifact, prior to anomaly detection.
 
-Alert latency measures how early the system raises an alert relative to the onset of deterioration. Earlier alerts with slightly lower confidence are preferable to delayed alerts in time-critical scenarios.
+The value of alert latency determines the timing of an alert of the system compared to the deterioration start. Precautionary measures that have a lower confidence level are better than delayed alerts in time-sensitive situations.
 
-### – Failure Analysis
+###  Failure Analysis
 
 ### Failure Case 1: Motion Masking True Deterioration
 In cases where severe motion overlaps with genuine SpO₂ decline, artifact suppression may reduce sensitivity. This could delay detection of real hypoxia. A possible improvement would be multi-signal confirmation using heart rate and blood pressure trends.
@@ -20,3 +20,4 @@ Very gradual physiological decline may not exceed the trend thresholds within th
 
 ### Failure Case 3: Sensor Dropout or Missing Data
 Extended sensor dropout can reduce confidence and suppress alerts. Future versions should explicitly detect missing data segments and escalate alerts based on uncertainty rather than suppression alone.
+
