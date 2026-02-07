@@ -12,11 +12,13 @@ The project is a computer simulation of an ambulance monitoring pipeline in real
 
 there are some values been altered for demo execution for example like analysis **window size and risk sensitivity** requierd visualize gradual deterioration within the short demo period to view alert behavior
 These parameters are developed only to demonstrate and visualize.
+to deploy in Real world application these parameters should be altered according to riquierments  
 
 ## How to Run
 
 ### 1. Generate Data
 python src/simulate_stream.py
+
 
 
 
